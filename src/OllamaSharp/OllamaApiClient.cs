@@ -101,6 +101,11 @@ public class OllamaApiClient : IOllamaApiClient, IChatClient, IEmbeddingGenerato
 		SelectedModel = defaultModel;
 	}
 
+	/// <summary>
+	/// Gets or sets an action that is invoked when a function call is made by the chat client.
+	/// </summary>
+	public Action<IChatClient, string, IDictionary<string, object?>?>? OnFunctionCall { get; set; }
+
 	/// <inheritdoc />
 	public async IAsyncEnumerable<CreateModelResponse?> CreateModelAsync(CreateModelRequest request, [EnumeratorCancellation] CancellationToken cancellationToken = default)
 	{

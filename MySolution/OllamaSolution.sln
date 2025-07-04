@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OllamaSharp.ModelContextProtocol", "..\src\OllamaSharp.ModelContextProtocol\OllamaSharp.ModelContextProtocol.csproj", "{C45E6F6D-25AF-C589-236D-217A0423459E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OllamaSharp", "..\src\OllamaSharp\OllamaSharp.csproj", "{45E84082-91F5-62D4-9A21-549AF0EAC03D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OllamaSharp.SourceGenerators", "..\src\SourceGenerators\OllamaSharp.SourceGenerators.csproj", "{CA09AE00-E9B6-0191-599A-6A1FDFB4FA57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C45E6F6D-25AF-C589-236D-217A0423459E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C45E6F6D-25AF-C589-236D-217A0423459E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C45E6F6D-25AF-C589-236D-217A0423459E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C45E6F6D-25AF-C589-236D-217A0423459E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E84082-91F5-62D4-9A21-549AF0EAC03D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E84082-91F5-62D4-9A21-549AF0EAC03D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E84082-91F5-62D4-9A21-549AF0EAC03D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E84082-91F5-62D4-9A21-549AF0EAC03D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA09AE00-E9B6-0191-599A-6A1FDFB4FA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA09AE00-E9B6-0191-599A-6A1FDFB4FA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA09AE00-E9B6-0191-599A-6A1FDFB4FA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA09AE00-E9B6-0191-599A-6A1FDFB4FA57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2642D7C-52A9-4D1C-A23F-BDF16D03D833}
+	EndGlobalSection
+EndGlobal
