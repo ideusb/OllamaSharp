@@ -323,7 +323,14 @@ internal static class AbstractionMapper
 	{
 		if (response is ChatDoneResponseStream done)
 		{
-			return new ChatResponseUpdate(ToAbstractionRole(done.Message.Role), [new UsageContent(ParseOllamaChatResponseUsage(done))])
+			var doneContents = new List<AIContent>();
+			if (response != null && response.Message is not null)
+			{
+				doneContents.AddRange(GetAIContentsFromMessage(response.Message));
+			}
+			doneContents.Add(new UsageContent(ParseOllamaChatResponseUsage(done)));
+
+			return new ChatResponseUpdate(ToAbstractionRole(done.Message.Role), doneContents)
 			{
 				CreatedAt = done.CreatedAt,
 				FinishReason = done.DoneReason is null ? null : new ChatFinishReason(done.DoneReason),
