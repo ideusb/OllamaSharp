@@ -118,6 +118,7 @@ internal static class AbstractionMapper
 		TryAddOllamaOption<bool?>(options, OllamaOption.UseMlock, v => request.Options.UseMlock = (bool?)v);
 		TryAddOllamaOption<bool?>(options, OllamaOption.UseMmap, v => request.Options.UseMmap = (bool?)v);
 		TryAddOllamaOption<bool?>(options, OllamaOption.VocabOnly, v => request.Options.VocabOnly = (bool?)v);
+		TryAddOllamaOption<bool?>(options, OllamaOption.Think, v => request.Think = (bool?)v);
 		TryAddOption<string?>(options, Application.KeepAlive, v => request.KeepAlive = (string?)v);
 
 		return request;
@@ -381,6 +382,9 @@ internal static class AbstractionMapper
 				}
 			}
 		}
+
+		if (message.Thinking?.Length > 0)
+			contents.Insert(0, new TextReasoningContent(message.Thinking));
 
 		// Ollama frequently sends back empty content with tool calls. Rather than always adding an empty
 		// content, we only add the content if either it's not empty or there weren't any tool calls.

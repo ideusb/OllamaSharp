@@ -19,7 +19,7 @@ public abstract class OllamaConsole(IOllamaApiClient ollama)
 	public static string ErrorTextColor { get; } = "red";
 
 	public static string AiTextColor { get; } = "cyan";
-	public static string AiThinkTextColor { get; } = "magenta";
+	public static string AiThinkTextColor { get; } = "gray";
 
 	public static string START_NEW_COMMAND { get; } = "/new";
 	public static string USE_MCP_SERVER_COMMAND { get; } = "/mcp";
@@ -78,7 +78,7 @@ public abstract class OllamaConsole(IOllamaApiClient ollama)
 	}
 
 	internal void ToggleThink()
-	{ 
+	{
 		// null -> false -> true -> null -> ...
 		Think = Think == null ? false : (Think == false ? true : (Think == true ? null : false));
 		AnsiConsole.MarkupLine($"[{HintTextColor}]Think mode is [{AccentTextColor}]{Think?.ToString().ToLower() ?? "(null)"}[/].[/]");
